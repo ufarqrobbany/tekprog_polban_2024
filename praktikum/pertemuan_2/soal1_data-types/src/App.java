@@ -1,39 +1,50 @@
 import java.util.Scanner;
+import java.math.BigInteger;
 
 public class App {
     static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) throws Exception {
-        
+
+        // Masukkan jumlah angka
         System.out.print("Jumlah angka: ");
         int T = input.nextInt();
         input.nextLine();
 
         String[] n = new String[T];
-        
-        System.out.println("Masukkan " + T + " angka: ");   
+        // Isi array dengan angka
+        System.out.println("Masukkan " + T + " angka: ");
         for (int i = 0; i < T; i++) {
             n[i] = input.nextLine();
         }
-        
-        long temp;
+
+        // Cek
         for (int i = 0; i < T; i++) {
-            temp = Long.parseLong(n[i]);
-            System.out.println("Angka " + n[i] + " dapat dimasukkan ke dalam:");
+            BigInteger num = new BigInteger(n[i]);
 
-            if (temp >= Byte.MIN_VALUE && temp <= Byte.MAX_VALUE) {
-                System.out.println("* byte");
-            }
-            
-            if (temp >= Short.MIN_VALUE && temp <= Short.MAX_VALUE) {
-                System.out.println("* short");
-            }
+            if (num.compareTo(BigInteger.valueOf(Long.MIN_VALUE)) >= 0 && num.compareTo(BigInteger.valueOf(Long.MAX_VALUE)) <= 0) {
+                System.out.println(n[i] + " can be fitted in:");
 
-            if (temp >= Integer.MIN_VALUE && temp <= Integer.MAX_VALUE) {
-                System.out.println("* int");
-            }
+                Long numLong = Long.parseLong(n[i]);
+                if (numLong >= Byte.MIN_VALUE && numLong <= Byte.MAX_VALUE) {
+                    System.out.println("* byte");
+                }
 
-            System.out.println("* long");
+                if (numLong >= Short.MIN_VALUE && numLong <= Short.MAX_VALUE) {
+                    System.out.println("* short");
+                }
+
+                if (numLong >= Integer.MIN_VALUE && numLong <= Integer.MAX_VALUE) {
+                    System.out.println("* int");
+                }
+
+                if (numLong >= Long.MIN_VALUE && numLong <= Long.MAX_VALUE) {
+                    System.out.println("* long");
+                }
+            } else {
+                System.out.println(n[i] + " can't be fitted anywhere");
+            }
         }
     }
 }
+

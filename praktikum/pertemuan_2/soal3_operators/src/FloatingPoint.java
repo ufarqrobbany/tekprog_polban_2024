@@ -6,3 +6,4 @@ class FloatingPoint {
         System.out.println(nx);
     }
 }
+
