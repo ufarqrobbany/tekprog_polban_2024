@@ -24,7 +24,11 @@ public class Menu {
     return stok;
   }
 
-  // method
+  public void setStok(int stok) {
+    this.stok = stok;
+  }
+
+  // methods
   public boolean isOutofStock() {
     if(getStok() == 0) {
         return true;
@@ -32,4 +36,13 @@ public class Menu {
         return false;
     }
   } 
+
+  public void penguranganStok(int kuantitas) {
+    if(!isOutofStock() && (getStok() - kuantitas >= 0)) {
+      setStok(getStok() - kuantitas);
+      System.out.println("Berhasil memesan");
+    } else {
+      System.out.println("Pemesanan gagal");
+    }
+  }
 }

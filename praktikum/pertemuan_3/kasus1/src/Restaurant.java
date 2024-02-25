@@ -1,6 +1,6 @@
 public class Restaurant {
     
-    // buat menjadi class menu dan gunakan access modifier private
+     // buat menjadi class menu dan gunakan access modifier private
     // public String[] nama_makanan;
     // public double[] harga_makanan;
     // public int[] stok;
@@ -14,6 +14,7 @@ public class Restaurant {
     //     harga_makanan = new double[10];
     //     stok = new int[10];
     // }
+    // constructor
     public Restaurant(int maxMenu) {
         menus = new Menu[maxMenu];
     }
@@ -23,15 +24,27 @@ public class Restaurant {
         // this.harga_makanan[id] = harga;
         // this.stok[id] = stok;
         menus[id] = new Menu(nama, harga, stok);
-        // tambahkan pemanggilan method nextId();
-        nextId();
+        id++;
     }
 
     public void tampilMenuMakanan() {
-        for(int i=0; i<=id; i++) {
+        for(int i=0; i<id; i++) {
             if(!menus[i].isOutofStock()) {
                 System.out.println(menus[i].getNamaMakanan() + "[" + menus[i].getStok() + "]" + "\tRp. " + menus[i].getHargaMakanan());
             }
+        }
+    }
+
+    public void pesanMenuMakanan(String nama, int kuantitas) {
+        boolean valid = false;
+        for(int i = 0; i < id; i++) {
+            if(menus[i].getNamaMakanan() == nama) {
+                menus[i].penguranganStok(kuantitas);
+                valid = true;
+            }
+        }
+        if(valid == false) {
+            System.out.println("Nama makanan tidak ditemukan");
         }
     }
 
@@ -43,10 +56,9 @@ public class Restaurant {
     //         return false;
     //     }
     // }
-
+ 
+    // method tidak diperlukan
     // public static void nextId() {
-    // ubah access modifier menjadi private karena method ini hanya dipanggil di class ini (method tambahMakanan)
-    private static void nextId() {
-        id++;
-    }
+    //     id++;
+    // }
 }
