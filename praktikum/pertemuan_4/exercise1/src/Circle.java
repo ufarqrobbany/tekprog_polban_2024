@@ -26,7 +26,7 @@ public class Circle { // Save as "Circle.java"
     }
 
     /** Constructs a Circle instance with the given color and radius */
-    public Circle(double r, String c) { // 4th constructor
+    public Circle(double r, String c) {
         radius = r;
         color = c;
     }
@@ -41,14 +41,14 @@ public class Circle { // Save as "Circle.java"
         return color;
     }
 
-    /** Returns the area of this Circle instance */
-    public double getArea() {
-        return radius * radius * Math.PI;
-    }
-
     /* Change color (Setter) */
     public void setColor(String color) {
         this.color = color;
+    }
+
+    /** Returns the area of this Circle instance */
+    public double getArea() {
+        return radius * radius * Math.PI;
     }
 
     /**
