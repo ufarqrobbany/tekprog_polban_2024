@@ -1,6 +1,6 @@
 package task2_1;
 
-public class testShape {
+public class TestShape {
   public static void main(String[] args) {
     // buat objek
     Shape s1 = new Shape();
