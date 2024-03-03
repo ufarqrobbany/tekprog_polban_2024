@@ -4,6 +4,7 @@
 public class Circle { // Save as "Circle.java"
     // private instance variable, not accessible from outside this class
     private double radius;
+    // ![Task 1.1] Add variable color: string
     private String color;
 
     // Constructors (overloaded)
@@ -25,12 +26,14 @@ public class Circle { // Save as "Circle.java"
         color = c;
     }
 
+    // ![Task 1.1] Add Constructor Circle(radius: double, color: string)
     /** Constructs a Circle instance with the given color and radius */
     public Circle(double r, String c) {
         radius = r;
         color = c;
     }
 
+    // ![Task 1.1] Add Getter and Setter for Color
     /** Returns the radius */
     public double getRadius() {
         return radius;
