@@ -16,7 +16,7 @@ public class Square extends Rectangle {
 
   @Override
   public void setWidth(double side) {
-    // setLength(side);
+    setLength(side);
     super.setWidth(side);
   }
 
