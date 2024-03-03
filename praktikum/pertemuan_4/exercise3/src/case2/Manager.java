@@ -22,14 +22,4 @@ class Manager extends Employee implements Sortable {
   }
 
   private String secretaryName;
-
-  @Override
-  public int compare(Sortable b) {
-    Employee eb = (Employee) b;
-    if (getSalary() < eb.getSalary())
-      return -1;
-    if (getSalary() > eb.getSalary())
-      return +1;
-    return 0;
-  }
 }
