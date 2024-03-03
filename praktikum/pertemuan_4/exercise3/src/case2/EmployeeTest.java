@@ -6,7 +6,6 @@ public class EmployeeTest {
     staff[0] = new Employee("Antonio Rossi", 2000000, 1, 10, 1989);
     staff[1] = new Employee("Maria Bianchi", 2500000, 1, 12, 1991);
     staff[2] = new Employee("Isabel Vidal", 1000000, 1, 11, 1993);
-    Sortable.shell_sort(staff);
 
     int i;
     for (i = 0; i < 3; i++)

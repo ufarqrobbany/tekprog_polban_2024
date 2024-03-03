@@ -1,6 +1,6 @@
 package case2;
 
-class Employee extends Sortable {
+class Employee implements Sortable {
   public Employee(String n, double s, int day, int month, int year) {
     name = n;
     salary = s;
@@ -26,6 +26,11 @@ class Employee extends Sortable {
   private int hireday;
   private int hiremonth;
   private int hireyear;
+
+  // getter
+  public double getSalary() {
+    return salary;
+  }
 
   @Override
   public int compare(Sortable b) {
