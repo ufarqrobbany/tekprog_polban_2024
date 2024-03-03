@@ -1,3 +1,5 @@
+package case1;
+
 class Employee extends Sortable {
   public Employee(String n, double s, int day, int month, int year) {
     name = n;

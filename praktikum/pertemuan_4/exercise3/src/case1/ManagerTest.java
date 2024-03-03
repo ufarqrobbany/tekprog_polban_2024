@@ -1,3 +1,5 @@
+package case1;
+
 public class ManagerTest {
   public static void main(String[] args) {
     Employee[] staff = new Employee[3];
