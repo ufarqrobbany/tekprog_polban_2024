@@ -1,0 +1,15 @@
+Manager
+Store123
+John Doe
+5000.00
+40.0
+20.0
+10000.0
+50000.0
+Sales Associate
+Store456
+Jane Smith
+10.0
+30.0
+15.0
+10.0
