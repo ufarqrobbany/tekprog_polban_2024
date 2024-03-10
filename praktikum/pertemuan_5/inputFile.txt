@@ -1,0 +1,15 @@
+Manager
+StoreHehe
+Jane Hehe
+6000,00
+40,0
+40,0
+10000,0
+50000,0
+Sales Associate
+StoreHaha
+Smith Haha
+900,0
+1000,0
+905,0
+300,0

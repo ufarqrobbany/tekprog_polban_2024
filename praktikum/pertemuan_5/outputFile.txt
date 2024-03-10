@@ -1,0 +1,25 @@
+******************************************************
+Number of employees working as MANAGER are: 1
+******************************************************
+1. Manager Details:
+Store Details: StoreHehe
+Employee Name: Jane Hehe
+Base Pay: $6000.0
+Number of Hours worked: 40.0hrs
+Payment Rate per hour: $40.0/hr
+Total Sales in store: $50000.0
+Sales done: $10000.0
+Percentage of sales done: 20,00%
+Gross Payment: $8360,0
+Remaining store revenue: $34293.6
+******************************************************
+Number of employees working as SALES ASSOCIATES are: 1
+******************************************************
+Store Details: StoreHaha
+Employee Name: Smith Haha
+Base Pay: $900.0
+Number of Hours worked: 1000.0hrs
+Payment Rate per hour: $905.0/hr
+Sales Rate: 30000.0%
+Total commission: $90.0
+Gross Payment: $905990.0
