@@ -12,7 +12,6 @@ package store;
  */
 public interface Employee {
 
-    
     /**
      * This method Calculates the pay of the employee.
      *
@@ -24,8 +23,10 @@ public interface Employee {
      * This method Checks if the employee should be awarded with a promotion.
      *
      * @return- This method returns boolean the eligibility status for
-     * promotion. for an employee.
+     *          promotion. for an employee.
      */
     boolean checkPromotionEligibility();
 
+    // Abstract method for Employee interface - Representing daily tasks
+    void performDailyTasks();
 }

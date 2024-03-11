@@ -19,15 +19,15 @@ public class SalesAssociate extends AbstractStoreEmployee {
      * This is a argument constructor which Initializes variable salesRate and
      * need to call its super class to initialize other variables
      *
-     * @param salesRate - The parameter Percentage of sales done by a
-     * SalesAssociate is passed.
+     * @param salesRate           - The parameter Percentage of sales done by a
+     *                            SalesAssociate is passed.
      * @param numberOfHoursWorked - The parameter Number of hours worked is
-     * passed.
-     * @param hourlyRate - The parameter Hourly Rate is passed.
-     * @param storeDetails - The parameter Details of the Store is passed.
-     * @param associateName - The parameter Name of the Sales Associate is
-     * passed.
-     * @param basePay - The parameter Base pay is passed.
+     *                            passed.
+     * @param hourlyRate          - The parameter Hourly Rate is passed.
+     * @param storeDetails        - The parameter Details of the Store is passed.
+     * @param associateName       - The parameter Name of the Sales Associate is
+     *                            passed.
+     * @param basePay             - The parameter Base pay is passed.
      */
     public SalesAssociate(double salesRate, double numberOfHoursWorked, double hourlyRate,
             String storeDetails, String associateName, double basePay) {
@@ -58,7 +58,7 @@ public class SalesAssociate extends AbstractStoreEmployee {
      */
     @Override
     public double calculatePay() {
-        return super.getBasePay() + calculateCommission() + 
+        return super.getBasePay() + calculateCommission() +
                 (super.getNumberOfHoursWorked() * super.getHourlyRate());
     }
 
@@ -66,7 +66,7 @@ public class SalesAssociate extends AbstractStoreEmployee {
      * Checks if the employee should be awarded with a promotion.
      *
      * @return - This method returns boolean the eligibility status for
-     * promotion for an employee.
+     *         promotion for an employee.
      */
     @Override
     public boolean checkPromotionEligibility() {
@@ -81,7 +81,7 @@ public class SalesAssociate extends AbstractStoreEmployee {
      * Percentage of sales done by a SalesAssociate.
      *
      * @return- This method returns double Percentage of sales done by a
-     * SalesAssociate.
+     *          SalesAssociate.
      */
     public double getSalesRate() {
         return salesRate * 100;
@@ -92,11 +92,29 @@ public class SalesAssociate extends AbstractStoreEmployee {
      * along with the Sales Rate.
      *
      * @return - This method returns a String representation of Sales and
-     * Employee details.
+     *         Employee details.
      */
     @Override
     public String toString() {
         return super.toString() + "Sales Rate: " + getSalesRate() + "%";
     }
 
+    @Override
+    public void performDailyTasks() {
+        System.out.println("Assisting customers with purchases and providing product information.");
+    }
+
+    // Implementing abstract method from Store interface
+    @Override
+    public double calculatePerformanceBonus() {
+        // Custom implementation for Sales Associate's performance bonus calculation
+        double storeSales = calculateRemainingStoreRevenue(0); // Assuming a default value for storeSales
+        return 0.08 * storeSales; // 8% bonus based on total store sales
+    }
+
+    @Override
+    public double calculateEmployeeContribution() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'calculateEmployeeContribution'");
+    }
 }

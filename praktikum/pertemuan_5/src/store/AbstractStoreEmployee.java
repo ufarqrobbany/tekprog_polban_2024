@@ -24,13 +24,16 @@ public abstract class AbstractStoreEmployee implements Employee, Store {
      * variables
      *
      * @param numberOfHoursWorked - The parameter Number of hours worked is
-     * passed.
-     * @param hourlyRate - The parameter Hourly rate of the Employee in dollars
-     * is passed.
-     * @param storeDetails - The parameter Details of the Store is passed.
-     * @param basePay - The parameter Base pay of the Employee in dollars is
-     * passed.
-     * @param employeeName - The parameter Full name of the Employee is passed.
+     *                            passed.
+     * @param hourlyRate          - The parameter Hourly rate of the Employee in
+     *                            dollars
+     *                            is passed.
+     * @param storeDetails        - The parameter Details of the Store is passed.
+     * @param basePay             - The parameter Base pay of the Employee in
+     *                            dollars is
+     *                            passed.
+     * @param employeeName        - The parameter Full name of the Employee is
+     *                            passed.
      */
     public AbstractStoreEmployee(double numberOfHoursWorked, double hourlyRate, String storeDetails,
             double basePay, String employeeName) {
@@ -86,7 +89,7 @@ public abstract class AbstractStoreEmployee implements Employee, Store {
      * Checks if the employee should be awarded with promotion
      *
      * @return - This method returns the eligibility status for promotion for an
-     * employee.
+     *         employee.
      */
     @Override
     public abstract boolean checkPromotionEligibility();
@@ -158,7 +161,7 @@ public abstract class AbstractStoreEmployee implements Employee, Store {
      * Sets the number of hours worked
      *
      * @param numberOfHoursWorked - The parameter number of hours worked is
-     * passed.
+     *                            passed.
      */
     public void setNumberOfHoursWorked(double numberOfHoursWorked) {
         this.numberOfHoursWorked = numberOfHoursWorked;
@@ -177,7 +180,7 @@ public abstract class AbstractStoreEmployee implements Employee, Store {
      * Returns private variable are separated by one space.
      *
      * @return- This returns string representation of Employee and Store
-     * details.
+     *          details.
      */
     @Override
     public String toString() {
@@ -185,5 +188,25 @@ public abstract class AbstractStoreEmployee implements Employee, Store {
                 + "\nBase Pay: $" + basePay + "\nNumber of Hours worked: " + numberOfHoursWorked + "hrs"
                 + "\nPayment Rate per hour: $" + hourlyRate + "/hr\n";
     }
+
+    // Implementing abstract methods from Employee interface
+    @Override
+    public void performDailyTasks() {
+        // Placeholder implementation, customize based on daily tasks
+        System.out.println("Performing daily tasks as a store employee.");
+    }
+
+    @Override
+    public double calculatePerformanceBonus() {
+        double storeSales = calculateRemainingStoreRevenue(0); // Default value for storeSales
+        return 0.08 * storeSales; // 8% bonus based on total store sales
+    }
+
+    /**
+     * Calculates the contribution of the employee to the store.
+     *
+     * @return This method returns the employee's contribution.
+     */
+    public abstract double calculateEmployeeContribution();
 
 }

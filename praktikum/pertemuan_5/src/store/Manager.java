@@ -22,16 +22,18 @@ public class Manager extends AbstractStoreEmployee {
      * Constructor to initialize numberOfHoursWorked, hourlyRate, storeDetails,
      * basePay, name variables.
      *
-     * @param totalStoreSales - The parameter Total Sales in the Store is
-     * passed.
-     * @param salesDone - The parameterTotal Sales taken place in the store is
-     * passed.
+     * @param totalStoreSales     - The parameter Total Sales in the Store is
+     *                            passed.
+     * @param salesDone           - The parameterTotal Sales taken place in the
+     *                            store is
+     *                            passed.
      * @param numberOfHoursWorked - The parameter Number of Hours worked by the
-     * Manager is passed.
-     * @param hourlyRate - The parameter Hourly rate for the Manager is passed.
-     * @param storeDetails - The parameterDetails of the Store is passed.
-     * @param basePay - The parameter Base Pay Rate is passed.
-     * @param name - The parameter Name of the Manager is passed.
+     *                            Manager is passed.
+     * @param hourlyRate          - The parameter Hourly rate for the Manager is
+     *                            passed.
+     * @param storeDetails        - The parameterDetails of the Store is passed.
+     * @param basePay             - The parameter Base Pay Rate is passed.
+     * @param name                - The parameter Name of the Manager is passed.
      */
     public Manager(double totalStoreSales, double salesDone, double numberOfHoursWorked,
             double hourlyRate, String storeDetails, double basePay, String name) {
@@ -67,7 +69,7 @@ public class Manager extends AbstractStoreEmployee {
      * Checks if the employee should be awarded with a promotion.
      *
      * @return - This method returns the eligibility status for promotion for an
-     * employee.
+     *         employee.
      */
     @Override
     public boolean checkPromotionEligibility() {
@@ -139,7 +141,7 @@ public class Manager extends AbstractStoreEmployee {
      * Returns the total store sales in dollars
      *
      * @param totalStoreSales - The parameter Total sales in the store is
-     * passed.
+     *                        passed.
      */
     public void setTotalStoreSales(double totalStoreSales) {
         this.totalStoreSales = totalStoreSales;
@@ -150,12 +152,35 @@ public class Manager extends AbstractStoreEmployee {
      * total sales in store.
      *
      * @return - This method returns a String representation of total store
-     * sales and sales done.
+     *         sales and sales done.
      */
     @Override
     public String toString() {
         return super.toString() + "Total Sales in store: $" + totalStoreSales
                 + "\nSales done: $" + salesDone;
+    }
+
+    @Override
+    public void performDailyTasks() {
+        System.out.println("Overseeing store operations and managing staff.");
+    }
+
+    // Implementing abstract method from Store interface
+    @Override
+    public double calculatePerformanceBonus() {
+        // Custom implementation for Manager's performance bonus calculation
+        double totalSales = getTotalStoreSales(); // Assuming a method to get total sales
+        if (totalSales > 100000) {
+            return 0.15 * getBasePay(); // 15% bonus for high sales
+        } else {
+            return 0.05 * getBasePay(); // 5% bonus for lower sales
+        }
+    }
+
+    @Override
+    public double calculateEmployeeContribution() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'calculateEmployeeContribution'");
     }
 
 }

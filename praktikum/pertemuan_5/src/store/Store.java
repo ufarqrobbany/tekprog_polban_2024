@@ -16,7 +16,6 @@ public interface Store {
      * It is a constant field value.
      */
     static final double COMMISSION_RATE = 0.10;
-    
 
     /**
      * It is a constant field value.
@@ -25,7 +24,7 @@ public interface Store {
 
     /**
      *
-     * @return 
+     * @return
      * @return- This method returns the calculateCommission.
      */
     public double calculateCommission();
@@ -37,4 +36,6 @@ public interface Store {
      */
     public double calculateRemainingStoreRevenue(double storeSales);
 
+    // Abstract method for calculating performance bonus
+    double calculatePerformanceBonus();
 }
