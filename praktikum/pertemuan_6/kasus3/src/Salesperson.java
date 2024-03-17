@@ -1,8 +1,8 @@
 // ******************************************************************
-// Salesperson.java
+//  Salesperson.java
 //
-// Represent a sales person who has a first name, last
-// name, and total number of sales.
+//  Represent a sales person who has a first name, last
+//  name, and total number of sales.
 // ******************************************************************
 
 public class Salesperson implements Comparable {
@@ -10,8 +10,8 @@ public class Salesperson implements Comparable {
   private int totalSales;
 
   // ----------------------------------------------------
-  // Constuctor: Sets up the sales person object with
-  // the given data.
+  // Constructor: Sets up the sales person object with
+  //              the given data.
   // ----------------------------------------------------
   public Salesperson(String first, String last, int sales) {
     firstName = first;

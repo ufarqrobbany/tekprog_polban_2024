@@ -1,7 +1,7 @@
 // ******************************************************************
-// String.java
+//  Strings.java
 //
-// Demonstrates the selection sort on an array of strings.
+//  Demonstrates the selection sort on an array of strings.
 // ******************************************************************
 
 import java.util.Scanner;
@@ -17,16 +17,18 @@ public class Strings {
 
     Scanner scan = new Scanner(System.in);
 
-    System.out.println("\nHow many strings do you want to sort? ");
+    System.out.print("\nHow many strings do you want to sort? ");
     size = scan.nextInt();
     stringList = new String[size];
 
     System.out.println("\nEnter the strings...");
     for (int i = 0; i < size; i++)
       stringList[i] = scan.next();
+
+    //  Sorting.selectionSort(stringList);
     Sorting.insertionSort(stringList);
 
-    System.out.println("\nYour numbers in sorted oreder...");
+    System.out.println("\nYour string in sorted order...");
     for (int i = 0; i < size; i++)
       System.out.print(stringList[i] + " ");
     System.out.println();

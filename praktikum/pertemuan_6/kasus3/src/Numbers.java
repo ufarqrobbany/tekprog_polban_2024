@@ -1,7 +1,7 @@
 // ******************************************************************
-// Numbers.java
+//  Numbers.java
 //
-// Demonstrates the selection sort on an array of integers.
+//  Demonstrates the selection sort on an array of integers.
 // ******************************************************************
 
 import java.util.Scanner;
@@ -12,21 +12,24 @@ public class Numbers {
     // then prints them in sorted order.
     // ----------------------------------------------------------------
     public static void main(String[] args) {
+        // mengubah int[] menjadi Integer[]
         Integer[] intList;
         int size;
 
         Scanner scan = new Scanner(System.in);
 
-        System.out.println("\nHow many integers do you want to sort? ");
+        System.out.print("\nHow many integers do you want to sort? ");
         size = scan.nextInt();
         intList = new Integer[size];
 
         System.out.println("\nEnter the numbers...");
         for (int i = 0; i < size; i++)
             intList[i] = scan.nextInt();
+
+        // Sorting.selectionSort(intList);
         Sorting.insertionSort(intList);
 
-        System.out.println("\nYour numbers in sorted oreder...");
+        System.out.println("\nYour numbers in sorted order...");
         for (int i = 0; i < size; i++)
             System.out.print(intList[i] + " ");
         System.out.println();

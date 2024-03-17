@@ -1,7 +1,7 @@
 // ******************************************************************
-// WeeklySales.java
+//  WeeklySales.java
 //
-// Sorts the Sales staff in descending oreder by sales.
+//  Sorts the Sales staff in descending order by sales.
 // ******************************************************************
 
 import java.util.Scanner;
