@@ -1,14 +1,13 @@
 // ******************************************************************
-// Sorting.java Author: Lewis/Loftus
+//  Sorting.java      Author: Lewis/Loftus
 //
-// Demonstrates the selection sort and insetion sort algorithms.
+//  Demonstrates the selection sort and insertion sort algorithms.
 // ******************************************************************
 
 public class Sorting {
-
   // ----------------------------------------------------------------
-  // Sort the speccified array of objects using the selection
-  // sort algotihm.
+  // Sort the specified array of objects using the selection
+  // sort algorithm.
   // ----------------------------------------------------------------
   public static void selectionSort(Comparable[] list) {
     int min;
