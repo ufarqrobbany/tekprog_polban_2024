@@ -41,11 +41,13 @@ public class Salesperson implements Comparable {
   // ------------------------------- -------------
   public int compareTo(Object other) {
     int result;
-    // Casting other to SalesPerson and assign in variable sales
+    // Complete the compareTo method in the Salesperson class. The comparison should be based on total sales
     Salesperson sales = (Salesperson) other;
     if (this.totalSales < sales.totalSales) {
+      // return a negative number if the executing object has total sales less than the other object 
       result = -1;
     } else if (this.totalSales > sales.totalSales) {
+      // return a positive number if the sales are greater
       result = 1;
     } else {
       result = this.lastName.compareTo(sales.lastName);
