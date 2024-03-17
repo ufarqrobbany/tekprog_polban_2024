@@ -3,6 +3,7 @@
 //
 // Represents the personnel staff of a particular business.
 // *********************************************************
+
 public class Staff {
   StaffMember[] staffList;
 
@@ -22,13 +23,14 @@ public class Staff {
     ((Hourly) staffList[3]).addHours(40);
 
     // Add two commissioned employees to the staffList
-    staffList[6] = new Commission("Thafa", "666 Off Road", "555-1234", "087-5678", 6.25, 0.2);
-    staffList[7] = new Commission("Ramdani", "101 Boulevard Apartement", "555-4235", "123-5678", 9.75, 0.15);
-    // For the first additional employee you added, put the hours worked at 35 and
-    // the total sales $400
+    staffList[6] = new Commission("Umar Faruq", "987 Polban", "0895-6129", "311-2030", 6.25, 0.2);
+    staffList[7] = new Commission("Robbany", "202 Tasik", "5085-6089", "200-5220", 9.75, 0.15);
+
+    // For the first additional employee you added, put the hours worked at 35 and the total sales $400
     ((Commission) staffList[6]).addHours(35);
     ((Commission) staffList[6]).addSales(400);
-    // for the second, put the hours at 40 and the sales at $950
+
+    // for the second employee, put the hours at 40 and the total sales at $950
     ((Commission) staffList[7]).addHours(40);
     ((Commission) staffList[7]).addSales(950);
   }

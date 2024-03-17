@@ -11,14 +11,12 @@ public class Commission extends Hourly {
   private double commissionRate;
 
   // The constructor takes 6 parameters
-  public Commission(String eName, String eAddress, String ePhone, String socSecNumber, double rate,
-      double commissionRate) {
+  public Commission(String eName, String eAddress, String ePhone, String socSecNumber, double rate, double commissionRate) {
     super(eName, eAddress, ePhone, socSecNumber, rate);
     this.commissionRate = commissionRate;
   }
 
   // One additional method is needed: public void addSales (double totalSales)
-  // that adds the parameter to the instance variable representing total sales.
   public void addSales(double totalSales) {
     this.totalSales += totalSales;
   }
@@ -30,11 +28,9 @@ public class Commission extends Hourly {
     return payment;
   }
 
-  // The toString method needs to call the toString method of the parent class
-  // then add the total sales to that.
+  /* The toString method needs to call the toString method of the parent class
+   then add the total sales to that. */
   public String toString() {
-    String result = super.toString();
-    result += "\nTotal sales: " + totalSales;
-    return result;
+    return super.toString() + "\nTotal sales: " + totalSales;
   }
 }
