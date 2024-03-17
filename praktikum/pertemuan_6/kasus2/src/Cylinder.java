@@ -1,8 +1,8 @@
-/**
- * Cylinder class
- *
- * @author Thafa Fadillah Ramdani
- */
+// *********************************************************
+//  Cylinder.java
+//
+//  Author: Umar Faruq Robbany
+// *********************************************************
 
 // Cylinder class is descendants of the Shape class
 public class Cylinder extends Shape {
@@ -20,8 +20,7 @@ public class Cylinder extends Shape {
   }
 
   // ---------------------------------------
-  // Returns the surface area of the cylinder.
-  // Its area (surface area) is PI*radius^2*height
+  // Returns the surface area of the cylinder: PI*radius^2*height
   // ---------------------------------------
   public double area() {
     return Math.PI * radius * radius * height;

@@ -1,14 +1,14 @@
 // *********************************************************
-// Spehere.java
+//  Spehere.java
 //
-// Represents a sphere
+//  Represents a sphere
 // *********************************************************
 
 public class Sphere extends Shape {
-  private double radius;
+  private double radius; // radius in feet
 
   // --------------------------------
-  // Constructor: sets up the sphere.
+  // Constructor: Sets up the sphere.
   // --------------------------------
   public Sphere(double r) {
     super("Sphere");
